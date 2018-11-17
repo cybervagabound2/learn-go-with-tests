@@ -14,7 +14,7 @@ func TestWallet(t *testing.T) {
 	t.Run("Withdraw with funds", func(t *testing.T) {
 		wallet := Wallet{Bitcoin(20)}
 		err := wallet.Withdraw(Bitcoin(10))
-		
+
 		assertBalance(t, wallet, Bitcoin(10))
 		assertNoError(t, err)
 	})
